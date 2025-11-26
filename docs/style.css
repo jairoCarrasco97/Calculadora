@@ -1,0 +1,179 @@
+body {
+    background-color: #387177;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+@media (max-width: 800px) {
+    body {
+        flex-direction: column;
+    }
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 3vw;
+    padding: 0 0 7vw 0;
+}
+
+#slider {
+    display: flex;
+    flex-direction: column;
+    line-height: 1em;
+}
+
+#slider h1 {
+    margin: 5vw 0 0 2vw;
+    color: #89ab40;
+}
+
+.recorte {
+    overflow: hidden;
+    margin: 2vw 0 0 12vw;
+    overflow: hidden;
+    height: 2.5em;
+}
+
+.slider-palabras {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.5em;
+    font-size: 6.5vw;
+    color: #bbfa00;
+    animation: animationWord 5s infinite ease-in-out;
+}
+
+
+#calculadora {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(69, 68, 73);
+    margin: 5vw auto 0 auto;
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 20px;
+    aspect-ratio: 9/16;
+    width: clamp(200px, 20vw, 400px);
+    /* tamaño de la calculadora */
+
+}
+
+#pantalla {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(194, 194, 194);
+    width: 90%;
+    text-align: center;
+    flex: 2;
+    margin: 5% auto;
+    border: 5px solid black;
+    justify-content: center;
+    /* Centra horizontalmente */
+    align-items: center;
+    /* Centra verticalmente */
+}
+
+.resultado {
+    display: flex;
+    background-color: rgb(230, 231, 200);
+    width: 80%;
+    height: 10%;
+    margin: 5% auto;
+    flex: 1.5;
+    border-bottom: 3px solid black;
+    justify-content: center;
+    /* Centra horizontalmente */
+    align-items: center;
+    /* Centra verticalmente */
+}
+
+.secundario {
+    display: flex;
+    background-color: rgb(230, 231, 200);
+    border-radius: 20px;
+    width: 90%;
+    flex: 1;
+    flex-direction: row;
+    gap: 10%;
+    text-align: center;
+    justify-content: center;
+    /* Centra horizontalmente */
+    align-items: center;
+    /* Centra verticalmente */
+}
+
+#teclado {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 casillas por fila */
+    text-align: center;
+    flex: 5;
+    aspect-ratio: 3/1;
+}
+
+#teclado div {
+    display: flex;
+    margin: auto;
+    border: 3px solid black;
+    border-radius: 20% 40% 40% 40%;
+    width: 70%;
+    height: 70%;
+    justify-content: center;
+    /* Centra horizontalmente */
+    align-items: center;
+    /* Centra verticalmente */
+}
+
+#igual {
+    grid-column: span 3;
+    /*Ocupa 3 casillas*/
+    text-align: center;
+}
+
+.tecla {
+    background-color: rgb(141, 141, 141);
+    transition: all 0.1s ease-out;
+}
+
+#limpiar {
+    background-color: rgb(204, 219, 120);
+}
+
+.tecla:hover {
+    background-color: rgb(150, 150, 150);
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.tecla:active {
+    background-color: rgb(100, 100, 100);
+    transform: scale(0.9);
+}
+
+@keyframes animationWord {
+    0% {
+        transform: translateY(0%);
+    }
+
+    20% {
+        transform: translateY(-30%);
+    }
+
+    40% {
+        transform: translateY(-55%);
+    }
+
+    60% {
+        transform: translateY(-80%);
+    }
+
+    80% {
+        transform: translateY(-105%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
